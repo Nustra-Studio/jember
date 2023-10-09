@@ -1,0 +1,17 @@
+{
+    "name": "nshid/webgis-php",
+    "require": {
+        "joshcam/mysqli-database-class": "dev-master",
+
+        "verot/class.upload.php": "dev-master",
+        "dompdf/dompdf": "^2.0",
+        "josantonius/session": "^2.0"
+    },
+    "license": "tidak ada",
+    "authors": [
+        {
+            "name": "as-shiddiq",
+            "email": "n.shiddiq@gmail.com"
+        }
+    ]
+}
