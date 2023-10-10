@@ -17,8 +17,8 @@ class HotspotModel extends CI_Model{
 		->join('m_kecamatan b','a.id_kecamatan=b.id_kecamatan','LEFT')
 		->join('m_keluhan c','a.id_kategori_keluhan=c.id_kategori_keluhan','LEFT')
 		->join('m_kategori_hotspot d','a.id_kategori_hotspot=d.id_kategori_hotspot','LEFT')
-		->where('tanggal >=', $start_date)
-		->where('tanggal <=', $end_date)
+		->where('tanggal >=', $startDate)
+		->where('tanggal <=', $endDate)
 		->get();
 return $data;
     }
