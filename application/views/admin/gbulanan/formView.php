@@ -5,9 +5,9 @@
                     foreach ($data_grafik as $pinjam => $p_buku) {
                        $data_pinjam[]=['label'=>$p_buku->pinjam_bulan, 'y'=>$p_buku->jumlah];
                     }
-
-                    ?>
                     var_dump($data_pinjam);
+                    ?>
+                    
 
                    
                     <body>
