@@ -57,6 +57,9 @@ class Hotspot extends CI_Controller {
 			if($_POST['parameter']=="tambah"){
 				$this->Model->insert($data);
 			}
+			elseif($_POST['parameter']=="add_up"){
+				$this->Model->insert($data);
+			}
 			else{
 				$this->Model->update($data,['id_hotspot'=>$this->input->post('id_hotspot')]);
 			}
