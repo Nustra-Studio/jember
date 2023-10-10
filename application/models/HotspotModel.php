@@ -11,6 +11,17 @@ class HotspotModel extends CI_Model{
 					->get();
 		return $data;
 	}
+	public function get_data_by_date_range($start_date, $end_date) {
+		$data=$this->db->select('*')
+		->from('t_hotspot a')
+		->join('m_kecamatan b','a.id_kecamatan=b.id_kecamatan','LEFT')
+		->join('m_keluhan c','a.id_kategori_keluhan=c.id_kategori_keluhan','LEFT')
+		->join('m_kategori_hotspot d','a.id_kategori_hotspot=d.id_kategori_hotspot','LEFT')
+		->where('tanggal >=', $start_date)
+		->where('tanggal <=', $end_date)
+		->get();
+return $data;
+    }
 	function insert($data=array()){
 		$this->db->insert('t_hotspot',$data);
 		$info='<div class="alert alert-success alert-dismissible">
