@@ -14,8 +14,8 @@ class Api extends CI_Controller {
 	{
 		$search = $this->input->get('date');
 		if(!empty($search) ){
-			$start_month =  strtotime($input_date . "-01");
-			$parsed_date = strtotime($input_date . "-01");
+			$start_month =  strtotime($search . "-01");
+			$parsed_date = strtotime($search . "-01");
 			$year = date('Y', $parsed_date);
         	$month = date('m', $parsed_date);
 			$end_of_month = date('Y-m-t', strtotime("+1 month", strtotime($input_date)));
