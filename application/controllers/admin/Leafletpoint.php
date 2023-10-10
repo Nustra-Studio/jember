@@ -12,6 +12,10 @@ class Leafletpoint extends CI_Controller {
 
 	public function index()
 	{
+		$date = $this->input->get('date');
+		if(!empty($date)){
+			dd($date);
+		}
 		$datacontent['url']='admin/leafletpoint';
 		$datacontent['title']='Peta Kunjungan Pasien';
 		// $datacontent['datatable']=$this->Model->get();
