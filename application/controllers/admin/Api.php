@@ -61,7 +61,7 @@ class Api extends CI_Controller {
 					if($id!=''){
 						$this->db->where('a.id_kategori_hotspot',$id);
 					}
-					$getHotspot=$this->HotspotModel->get_data_by_date_range($startDate, $endDate)->get();
+					$getHotspot=$this->HotspotModel->get_data_by_date_range($startDate, $endDate);
 					foreach ($getHotspot->result() as $row) {
 						$data=null;
 						$data['type']="Feature";
