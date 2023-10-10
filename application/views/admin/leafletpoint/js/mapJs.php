@@ -27,8 +27,8 @@
 	<script src="<?=base_url('assets/js/Leaflet.GoogleMutant.js')?>"></script>
 	<script src="<?=base_url('assets/node_modules/leaflet-easyprint/dist/bundle.js')?>"></script>
 	<script src="<?=base_url('assets/js/leaflet-search/dist/leaflet-search.src.js')?>"></script>
-	<script src="<?=site_url("$url_kecamatan")?>"></script>
-	<script src="<?=site_url("$url_kategorihotspot")?>"></script>
+	<script src="<?=site_url('admin/api/data/kecamatan')?>"></script>
+	<script src="<?=site_url('admin/api/data/kategorihotspot')?>"></script>
 
    <script type="text/javascript">
    	var map = L.map('map').setView([-8.101000313025155, 113.73199394376367], 14);
@@ -148,7 +148,7 @@
 		var layer={
 			name: data.nm_kategori_hotspot,
 			icon: iconByImage(data.icon),
-			layer: new L.GeoJSON.AJAX(["<?=site_url('admin/api/data/hotspot/point')?>/"+data.id_kategori_hotspot],
+			layer: new L.GeoJSON.AJAX(["<?=site_url("admin/api/data/hotspot/point?date=$date")?>/"+data.id_kategori_hotspot],
 				{
 					 pointToLayer: function (feature, latlng) {
 				    	// console.log(feature)
