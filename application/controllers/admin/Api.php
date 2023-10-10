@@ -18,7 +18,7 @@ class Api extends CI_Controller {
 			$year = date('Y', $parsed_date);
         	$month = date('m', $parsed_date);
 			$start_month = "$year-$month-01";
-			$end_of_month = date('Y-m-t', strtotime("+1 month", strtotime($search)));
+			$end_of_month = date('Y-m-t', mktime(0, 0, 0, $month, 1, $year));
 			header('Content-Type: application/json');
 			$response=[$start_month,$end_of_month];
 			echo "var dataKecamatan=".json_encode($response,JSON_PRETTY_PRINT);
