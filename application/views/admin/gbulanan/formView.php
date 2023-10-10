@@ -7,7 +7,7 @@
                     }
 
                     ?>
-                    <?=$data_pinjam?>
+                    print_r($data_pinjam);
 
                    
                     <body>
