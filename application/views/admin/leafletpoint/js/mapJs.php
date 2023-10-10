@@ -28,7 +28,7 @@
 	<script src="<?=base_url('assets/node_modules/leaflet-easyprint/dist/bundle.js')?>"></script>
 	<script src="<?=base_url('assets/js/leaflet-search/dist/leaflet-search.src.js')?>"></script>
 	<script src="<?=site_url('admin/api/data/kecamatan')?>"></script>
-	<script src="<?=site_url('admin/api/data/kategorihotspot')?>"></script>
+	<script src="<?=site_url("admin/api/data/kategorihotspot?date=$date")?>"></script>
 
    <script type="text/javascript">
    	var map = L.map('map').setView([-8.101000313025155, 113.73199394376367], 14);
