@@ -148,7 +148,7 @@
 		var layer={
 			name: data.nm_kategori_hotspot,
 			icon: iconByImage(data.icon),
-			layer: new L.GeoJSON.AJAX(["<?=site_url('admin/api/data/hotspot/point')?>/"+data.id_kategori_hotspot],
+			layer: new L.GeoJSON.AJAX(["<?=site_url("admin/api/data/hotspot/point?date=$date")?>/"+data.id_kategori_hotspot],
 				{
 					 pointToLayer: function (feature, latlng) {
 				    	// console.log(feature)
