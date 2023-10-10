@@ -23,8 +23,11 @@ if($parameter=='ubah' && $id!=''){
 elseif($parameter=='add_up' && $id!=''){
     $this->db->where('id_hotspot',$id);
     $row=$this->Model->get()->row_array();
-    
     extract($row);
+    $tanggal=date('d-m-Y');
+    $id_kategori_hotspot="";
+    $id_kategori_keluhan="";
+    
 }
 ?>
 <?=content_open('Form Register Pasien')?>
