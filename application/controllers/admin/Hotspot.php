@@ -141,7 +141,7 @@ class Hotspot extends CI_Controller {
 			$r[] = $row->nm_kategori_keluhan;
 			$r[] = '<div class="btn-group">
 								<a href="'.site_url($url.'/form/ubah/'.$row->id_hotspot).'" class="btn btn-info"><i class="fa fa-edit"></i> Ubah</a>
-								<a href="'.site_url($url.'/form/add/'.$row->id_hotspot).'" class="btn btn-success"><i class="fa fa-add"></i> Add </a>
+								<a href="'.site_url($url.'/form/add_up/'.$row->id_hotspot).'" class="btn btn-success"><i class="fa fa-plus"></i> Add </a>
 								<a href="'.site_url($url.'/hapus/'.$row->id_hotspot).'" class="btn btn-danger" onclick="return confirm(\'Hapus data?\')"><i class="fa fa-trash"></i> Hapus</a>
 							</div>';
 			$output['aaData'][] = $r;				

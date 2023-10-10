@@ -20,6 +20,11 @@ if($parameter=='ubah' && $id!=''){
     $row=$this->Model->get()->row_array();
     extract($row);
 }
+elseif($parameter=='add_up' && $id!=''){
+    $this->db->where('id_hotspot',$id);
+    $row=$this->Model->get()->row_array();
+    extract($row);
+}
 ?>
 <?=content_open('Form Register Pasien')?>
     <form method="post" action="<?=site_url($url.'/simpan')?>" enctype="multipart/form-data">
