@@ -23,7 +23,7 @@ if($parameter=='ubah' && $id!=''){
 elseif($parameter=='add_up' && $id!=''){
     $this->db->where('id_hotspot',$id);
     $row=$this->Model->get()->row_array();
-    var_dump($row);
+    echo($row->nik);
     extract($row);
 }
 ?>
