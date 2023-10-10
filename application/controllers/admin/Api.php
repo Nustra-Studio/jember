@@ -17,7 +17,7 @@ class Api extends CI_Controller {
 			$parsed_date = strtotime($search . "-01");
 			$year = date('Y', $parsed_date);
         	$month = date('m', $parsed_date);
-			$start_month = date('Y-m-t', strtotime($parsed_date));
+			$start_month = "$year-$month-01";
 			$end_of_month = date('Y-m-t', strtotime("+1 month", strtotime($search)));
 			header('Content-Type: application/json');
 			$response=[$start_month,$end_of_month];
