@@ -11,7 +11,7 @@ class HotspotModel extends CI_Model{
 					->get();
 		return $data;
 	}
-	public function get_data_by_date_range($start_date, $end_date) {
+	public function get_data_by_date_range($startDate, $endDate) {
 		$data=$this->db->select('*')
 		->from('t_hotspot a')
 		->join('m_kecamatan b','a.id_kecamatan=b.id_kecamatan','LEFT')
