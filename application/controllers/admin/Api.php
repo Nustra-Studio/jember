@@ -14,10 +14,10 @@ class Api extends CI_Controller {
 	{
 		$search = $this->input->get('date');
 		if(!empty($search) ){
-			$start_month =  strtotime($search . "-01");
 			$parsed_date = strtotime($search . "-01");
 			$year = date('Y', $parsed_date);
         	$month = date('m', $parsed_date);
+			$start_month = date('Y-m-t', strtotime($parsed_date));
 			$end_of_month = date('Y-m-t', strtotime("+1 month", strtotime($search)));
 			header('Content-Type: application/json');
 			$response=[$start_month,$end_of_month];
