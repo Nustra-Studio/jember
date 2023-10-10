@@ -5,7 +5,17 @@ class KategorihotspotModel extends CI_Model{
 	function get(){
 		$data=$this->db->get('m_kategori_hotspot');
 		return $data;
-	}
+	}    public function get_name_by_id($id) {
+        $this->db->select('nm_kategori_hotspot');
+        $this->db->where('id_kategori_hotspot', $id);
+        $query = $this->db->get('m_kategori_hotspot');
+
+        if ($query->num_rows() > 0) {
+            return $query->row()->nm_kategori_hotspot;
+        } else {
+            return null;
+        }
+    }
 	function insert($data=array()){
 		$this->db->insert('m_kategori_hotspot',$data);
 		$info='<div class="alert alert-success alert-dismissible">
