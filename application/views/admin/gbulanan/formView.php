@@ -1,11 +1,14 @@
 <?=content_open('Halaman Grafik Bulanan')?>
                     <div class="row" style="margin-right: 2px; margin-left: 2px">
                     <?php 
-                   $data_grafik = $this->db->query("SELECT COUNT(id_hotspot) AS jumlah, id_kategori_hotspot AS pinjam_bulan FROM t_hotspot GROUP BY id_kategori_hotspot ASC")->result();
+                   $data_grafik = $this->db->query("SELECT COUNT(id_hotspot) AS 
+                   jumlah, id_kategori_hotspot AS 
+                   pinjam_bulan FROM t_hotspot GROUP BY 
+                   id_kategori_hotspot ASC")->result();
                     foreach ($data_grafik as $pinjam => $p_buku) {
                        $data_pinjam[]=['label'=>$p_buku->pinjam_bulan, 'y'=>$p_buku->jumlah];
                     }
-                    var_dump($data_pinjam);
+                    var_dump($data_grafik);
                     ?>
                     
 
